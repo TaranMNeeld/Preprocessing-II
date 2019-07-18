@@ -1,1 +1,29 @@
 // Mixins in here
+
+.buttons (@buttonColor, @borderRadius) {
+    font-size: 2rem;
+    background: @buttonColor;
+    border-radius: @borderRadius;
+    margin: 15%;
+}
+
+.pageAnimations (@startMargin, @startWidth) {
+animation-duration: 2s;
+animation-name: slidein;
+@keyframes slidein {
+    from {
+      margin-left: @startMargin;
+      width: @startWidth; 
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+}
+
+.flexDisplay(@direction, @alignment) {
+    display: flex;
+    flex-direction: @direction;
+    align-items: @alignment;
+}
